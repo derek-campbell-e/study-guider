@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Study Guide</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+      html {
+        font-size: 30px;
+      }
+      body {
+        font-size: 1rem;
+      }
+      html, body {
+        background-color:#191d27;
+        color: #fff;
+      }
+      .card-container {
+        padding: 15px;
+      }
+      .card {
+        height: 100%;
+        color: #191d27;
+      }
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .reveal {
+        align-self: center;
+      }
+      .card-text {
+        flex: 1;
+      }
+      .sidebar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .btn {
+        margin: 20px;
+      }
+      .reveal-card, .card.back {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class='container-fluid'>
+      <div class='row'>
+        <div class='sidebar col-sm-3'>
+          <a href="#" class='btn btn-primary next-card'>NEXT</a>
+          <a href="#" class='btn btn-warning reveal-all'>REVEAL ALL</a>
+        </div>
+        <div class='content col-sm-9'>
+          <div class='row'>
+            <div class='study-guide col-sm-12'>
+              <div class="card-template" style='display:none'>
+                  <div class='card front'>
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="card-link reveal">Reveal</a>
+                    </div>
+                  </div>
+                  <div class='card back'>
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="card-link reveal">Reveal</a>
+                    </div>
+                  </div>
+                </div>
+
+              <div class='row study-guide-cards' style='height: 100vh; overflow:hidden;'>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <script>
+      window.$ = window.jQuery = require('jquery');
+      let sgr = require('./studyGuideRenderer')();
+    </script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+  </body>
+</html>
