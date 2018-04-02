@@ -4,7 +4,7 @@
   "description": "create visual flashcards, multiple table/s per card",
   "main": "index.js",
   "scripts": {
-    "start": "node --exec \"electron main.js\"",
+    "start": "electron main.js",
     "test": "DEBUG=*,-node* nodemon index.js"
   },
   "author": "",
